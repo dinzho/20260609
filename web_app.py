@@ -59,7 +59,7 @@ def create_chart(df, ticker):
         mpf.make_addplot([0]*len(df), panel=3, color='#808080', linestyle=':'),
     ]
     buf = BytesIO()
-    mpf.plot(df, type='candle', volume=True, addplot=apds, title=f"{ticker} 技術圖表",
+    mpf.plot(df, type='candle', volume=True, addplot=apds, title=f"{ticker} Technical Chart",
              figratio=(16,9), panel_ratios=(4,1,1,1), style='yahoo', savefig=buf)
     buf.seek(0)
     return buf
